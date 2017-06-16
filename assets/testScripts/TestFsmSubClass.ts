@@ -16,10 +16,19 @@ export default class TestFsmSubClass extends TestFsm {
         console.log('enterC');
     }
 
-    public onLoad(){
+    public async onLoad(){
         this.fsmStartUp();
         for(let i = 0; i < 5; i++) {
-            this.go();
+            await this.waitGo();
         }
+    }
+
+    protected async waitGo(): Promise<any> {
+        return new Promise<any>((resolve, reject)=>{
+            setTimeout(()=>{
+                this.go();
+                resolve();
+            }, 2000)
+        })
     }
 }

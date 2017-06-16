@@ -11,9 +11,6 @@ interface EventNameInterface{
 
 }
 import StateMachine from "../libs/StateMachine";
-import {AbstractComponent} from "../views/AbstractComponent";
-import {AbstractModel} from "../models/AbstractModel";
-import {AbstractController} from "../controllers/AbstractController";
 export abstract class TestFsm  extends cc.Component  {
 
     private fsm:any;
