@@ -107,22 +107,22 @@ export default class MainController extends cc.Component {
 
     checkEnd() : boolean {
 
-        if(Global2.storyNumConfigData2.currentStoryNum === Global2.storyNumConfigData2.totalStoryNum) {
-            //中立
-            this.resetResultState();
-            Global2.resultState.middle = true;
-            cc.director.loadScene("end");
-            return true;
-        } else if(Global2.hpConfigData2.currentHp > Global2.hpConfigData2.goodWinHp) {
+        if(Global2.hpConfigData2.currentHp >= Global2.hpConfigData2.goodWinHp) {
             //好
             this.resetResultState();
             Global2.resultState.good = true;
             cc.director.loadScene("end");
             return true;
-        } else if(Global2.hpConfigData2.currentHp < Global2.hpConfigData2.badWinHp) {
+        } else if(Global2.hpConfigData2.currentHp <= Global2.hpConfigData2.badWinHp) {
             //坏
             this.resetResultState();
             Global2.resultState.bad = true;
+            cc.director.loadScene("end");
+            return true;
+        }else if(Global2.storyNumConfigData2.currentStoryNum === Global2.storyNumConfigData2.totalStoryNum) {
+            //中立
+            this.resetResultState();
+            Global2.resultState.middle = true;
             cc.director.loadScene("end");
             return true;
         } else
