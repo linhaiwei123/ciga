@@ -17,7 +17,7 @@
         "__id__": 2
       },
       {
-        "__id__": 27
+        "__id__": 26
       }
     ],
     "_tag": -1,
@@ -78,7 +78,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 26
+        "__id__": 28
       }
     ],
     "_prefab": null,
@@ -655,7 +655,7 @@
       "__id__": 13
     },
     "_enabled": true,
-    "transition": 2,
+    "transition": 1,
     "pressedColor": {
       "__type__": "cc.Color",
       "r": 255,
@@ -675,9 +675,7 @@
     "pressedSprite": {
       "__uuid__": "e9ec654c-97a2-4787-9325-e6a10375219a"
     },
-    "hoverSprite": {
-      "__uuid__": "e9ec654c-97a2-4787-9325-e6a10375219a"
-    },
+    "hoverSprite": null,
     "clickEvents": [],
     "_N$interactable": true,
     "_N$enableAutoGrayEffect": false,
@@ -872,7 +870,7 @@
       "__id__": 18
     },
     "_enabled": true,
-    "transition": 2,
+    "transition": 1,
     "pressedColor": {
       "__type__": "cc.Color",
       "r": 255,
@@ -967,7 +965,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": -986,
+      "x": 0,
       "y": 0
     },
     "_skewX": 0,
@@ -1011,6 +1009,9 @@
       "__id__": 23
     },
     "_enabled": true,
+    "mainControllerNode": {
+      "__id__": 26
+    },
     "yesBtn": {
       "__id__": 13
     },
@@ -1025,22 +1026,6 @@
     }
   },
   {
-    "__type__": "cc.Canvas",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 2
-    },
-    "_enabled": true,
-    "_designResolution": {
-      "__type__": "cc.Size",
-      "width": 720,
-      "height": 1280
-    },
-    "_fitWidth": false,
-    "_fitHeight": true
-  },
-  {
     "__type__": "cc.Node",
     "_name": "MainController",
     "_objFlags": 0,
@@ -1052,7 +1037,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 28
+        "__id__": 27
       }
     ],
     "_prefab": null,
@@ -1097,7 +1082,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 27
+      "__id__": 26
     },
     "_enabled": true,
     "yesBtn": {
@@ -1115,5 +1100,21 @@
     "touchLayer": {
       "__id__": 25
     }
+  },
+  {
+    "__type__": "cc.Canvas",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 2
+    },
+    "_enabled": true,
+    "_designResolution": {
+      "__type__": "cc.Size",
+      "width": 720,
+      "height": 1280
+    },
+    "_fitWidth": false,
+    "_fitHeight": true
   }
 ]

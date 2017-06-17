@@ -64,7 +64,7 @@ export default class MainController extends cc.Component {
     downNode10: cc.Node;
 
     onLoad() {
-        this.hideAllExceptTouchLayer();
+        this.hideAll();
 
         /**
          * 获取随机故事
@@ -82,6 +82,7 @@ export default class MainController extends cc.Component {
             }
         }
         Global2.storyNumConfigData2.currentStoryNum++;
+        this.touchLayer.node.active = true;
         this.touchLayer.show(Global2.storyConfigDataArray2[randomI]);
     }
 
@@ -96,8 +97,8 @@ export default class MainController extends cc.Component {
             //TODO  up效果
         }
         //故事数目-1
-        Global2.storyNumConfigData2.currentStoryNum++;
         let isEnd = this.checkEnd();
+        Global2.storyNumConfigData2.currentStoryNum++;
         if(!isEnd) {
             this.newTurn();
         }
@@ -136,18 +137,15 @@ export default class MainController extends cc.Component {
         Global2.resultState.none = false;
     }
 
-
-    hideAllExceptTouchLayer() {
-        this.yesBtn.active = false;
-        this.noBtn.active = false;
-        this.goodDialog.active= false;
-        this.badDialog.active = false;
-    }
-
     hideAll() {
-        this.hideAllExceptTouchLayer();
-        this.touchLayer.node.active = false;
+       this.yesBtn.active = false;
+       this.noBtn.active = false;
+       this.touchLayer.node.active = false;
+       this.goodDialog.active = false;
+       this.badDialog.active = false;
     }
+
+
 
 
 }
